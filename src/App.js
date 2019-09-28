@@ -1,25 +1,18 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-  input: {
-    display: 'none',
-  },
-}));
+import Navbar from "./components/Navbar";
+
 
 function App() {
-  const classes = useStyles();
   return (
-    <div className="App">
-      <Button variant="contained" className={classes.button}>
-        Default
-      </Button>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        {/* <Route exact path="/" component */}
+      </div>
+    </Router>
   );
 }
 
