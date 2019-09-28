@@ -1,6 +1,7 @@
 // init express instance
 const express = require("express");
 const app = express();
+const createError = require("http-errors");
  
 const cors = require("cors");
 
@@ -24,11 +25,20 @@ app.use(helmet());
 
 let whitelist = new RegExp(process.env.WHITELIST_DOMAINS);
 
-// let corsOptions = {
-//     origin: (origin, callback) => {
-//         origin: 
-//     }
-// }
+// not using whitelist at the moment
+let corsOptions = {
+    origin: (origin, callback) => {
+        origin: true
+        callback(null, true)
+    },
+    credentials: true
+}
+
+app.get('/', cors(corsOptions), (req, res, next) => {
+    res.status(200).send("<h1>This route is enabled for CORS</h1>");
+})
+
+app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
     next(createError(404));
