@@ -4,6 +4,7 @@ import './App.css';
 
 import Navbar from "./components/Navbar";
 import Carousel from './components/Carousel';
+import ProductPage from './components/ProductPage';
 
 
 function App() {
@@ -11,8 +12,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Carousel />
-        {/* <Route exact path="/" component */}
+        <Route exact path="/" component={Carousel} />
+        <Route exact path="/(Tops|Bottoms|Dresses|Shoes)" component={ProductPage} />
       </div>
     </Router>
   );
