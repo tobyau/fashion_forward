@@ -1,13 +1,24 @@
 import React from 'react';
-//import logo from './logo.svg';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import './App.css';
 
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}));
+
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
-      <header className="App-header">
-      <h1>Hello hiii</h1>
-      </header>
+      <Button variant="contained" className={classes.button}>
+        Default
+      </Button>
     </div>
   );
 }
