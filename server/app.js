@@ -34,6 +34,19 @@ let corsOptions = {
     credentials: true
 }
 
+let db;
+
+mongoose.connect(process.env.MONGODB_CLOUD, {useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.Promise = global.Promise;
+db = mongoose.connection;
+
+db.once('open', () => {
+    console.log("MongoDB connection to Atlas Server has been established");
+})
+
+db.on('error', console.error.bind(console, 'MongoDB connection error \n'));
+
+
 app.get('/', cors(corsOptions), (req, res, next) => {
     res.status(200).send("<h1>This route is enabled for CORS</h1>");
 })
