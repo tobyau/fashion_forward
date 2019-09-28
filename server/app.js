@@ -44,6 +44,7 @@ app.use((req, res, next) => {
     next(createError(404));
 })
 
+
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
 })
