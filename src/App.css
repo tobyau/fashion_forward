@@ -1,3 +1,7 @@
+.App {
+  height : 100vh;
+}
+
 .navbar-container {
   margin-left: 5%;
   margin-right: 5%;
@@ -23,8 +27,9 @@
 
 
 .carousel-item {
-  height: 750px;
+  height: 70%;
 }
+
 .clickable-icon {
   margin-right: 30px;
   color: black;
