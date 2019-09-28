@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "helmet": "^3.21.1",
     "mongoose": "^5.7.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "twilio": "^3.35.0"
   }
 }
