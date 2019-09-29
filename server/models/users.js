@@ -7,7 +7,9 @@ let userSchema = new Schema({
     fname: String,
     address: String,
     phone: Number, 
-    email: String
+    email: String,
+    password: String,
+    cart: {type: Array, "default": []}
 });
 
 module.exports = mongoose.model("users", userSchema);

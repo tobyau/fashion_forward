@@ -19,5 +19,8 @@
     "mongoose": "^5.7.1",
     "nodemon": "^1.19.2",
     "twilio": "^3.35.0"
+  },
+  "devDependencies": {
+    "fsevents": "*"
   }
 }
