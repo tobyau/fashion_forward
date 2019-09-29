@@ -33,8 +33,8 @@
 
 <p><strong>Process</strong></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true" width="300">
+<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true" width="300" align="left">
 
-<img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true" width="300"></p>
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true" width="300" align="middle"></p>
 
 <img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1566.jpg?raw=true" width="600">
