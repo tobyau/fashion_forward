@@ -10,3 +10,6 @@ build
 .env
 .env.local
 .env.production
+
+.DS_Store
+yarn.lock
