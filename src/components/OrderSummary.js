@@ -12,7 +12,35 @@ class OrderSummary extends Component {
           <h5>Order Summary</h5>
           <div className="summary-container">
             <div className="order-container">
-              <img src={require(`../imgs/tops/1.png`)} alt="" className="order-item-img"/>
+            <div class="content">
+            <img src={require(`../imgs/tops/1.png`)} alt="" className="order-item-img"/>
+              <h4>Product Name</h4>
+              <p>Product Desciption</p>
+              <p>Quantity: 1</p>
+              <p>Price: $79.99</p>
+            </div>
+              <hr></hr>
+              <div className="form-group">
+               <input type="text" placeholder="PROMO CODE" className="promo-control form-control"/>
+              </div>
+              <div className="subtotal">
+                <div className="pricing">
+                  <p className="moveLeft ">Subtotal</p>
+                  <p className="moveRight subtotal-strike">$79.99</p>
+                </div>
+                <div className="pricing">
+                  <p className="moveLeft"></p>
+                  <p className="moveRight savings">-$10</p>
+                </div>
+                <div className="pricing">
+                  <p className="moveLeft">Delivery</p>
+                  <p className="moveRight">$5.00</p>
+                </div>
+                <div className="pricing">
+                  <p className="moveLeft"><b>Total</b></p>
+                  <p className="moveRight"><b>$74.99</b></p>
+                </div>
+              </div>
             </div>
           </div>
       </div>

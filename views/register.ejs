@@ -1,7 +1,7 @@
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body">
-      <h1 class="text-center mb-3">
+      <h1 class="text-center mb-6">
         <i class="fas fa-user-plus"></i> Register
       </h1>
       <% include ./partials/messages %>
@@ -39,7 +39,7 @@
             value="<%= typeof email != 'undefined' ? email : '' %>"
           />
         </div>
-        </div>
+        
         <div class="form-group">
           <label for="address">Address</label>
           <input
@@ -51,7 +51,7 @@
             value="<%= typeof address != 'undefined' ? address : '' %>"
           />
         </div>
-        </div>
+        
         <div class="form-group">
           <label for="phone">Phone Number</label>
           <input
@@ -85,6 +85,7 @@
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
         </div>
+      
         <button type="submit" class="btn btn-primary btn-block">
           Register
         </button>
@@ -92,4 +93,6 @@
       <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
     </div>
   </div>
+</div>
+</div>
 </div>
