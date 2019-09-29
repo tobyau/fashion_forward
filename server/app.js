@@ -13,7 +13,7 @@ require("dotenv").config();
 
 const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
-const session = require('express-session');
+// const session = require('express-session');
 const passport = require('passport');
 const path = require("path");
 
@@ -37,11 +37,11 @@ app.set('view engine', 'ejs');
 
 
 // Express Session
-app.use(session({
-    secret: 'secret',
-    resave: true,
-    saveUninitialized: true
-  }));
+// app.use(session({
+//     secret: 'secret',
+//     resave: true,
+//     saveUninitialized: true
+//   }));
   
 // Passport middleware
 app.use(passport.initialize());
