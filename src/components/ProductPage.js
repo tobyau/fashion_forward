@@ -30,18 +30,25 @@ const CardModal = (path) => {
   const handleClose = () => {
     setOpen(false);
   };
+  
   // var path = window.location.pathname;
   
-  var cards = (path) => {
-    for(let x = 0; x < 9; x++) {
-      return(<img src={require(`../imgs${path}/1.png`)} alt="" className="card-image"/>);
+  const Cards = (props) => {
+    var card = [];
+    for(let x = 1; x <= 9; x++) {
+      card.push(<img src={require(`../imgs${props.props.path}/${x}.png`)} alt="" className="card-image"/>)
     }
+    return(
+      <div>
+        {card}
+      </div>
+    );
   };
-    
+  
   return(
-    <div>
-      <div className="card" onClick={handleOpen}> 
-        {cards}
+    <div className="card-container">
+      <div onClick={handleOpen}> 
+        <Cards props={path}/>
       </div>
       <Modal
         aria-labelledby="transition-modal-title"
