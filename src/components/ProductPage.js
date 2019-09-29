@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const CardModal = () => {
+const CardModal = (path) => {
   const classes = useStyles();
   
   const [open, setOpen] = React.useState(false);
@@ -30,12 +30,18 @@ const CardModal = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  // var path = window.location.pathname;
   
+  var cards = (path) => {
+    for(let x = 0; x < 9; x++) {
+      return(<img src={require(`../imgs${path}/1.png`)} alt="" className="card-image"/>);
+    }
+  };
+    
   return(
     <div>
       <div className="card" onClick={handleOpen}> 
-        <img src="../imgs/tops/2.png" alt=""/>
-        {/* <h1>Testing</h1> */}
+        {cards}
       </div>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -64,7 +70,7 @@ class ProductPage extends Component {
   render() {
     return(
       <div>
-        <CardModal />
+        <CardModal path={window.location.pathname}/>
       </div>
     );
   }

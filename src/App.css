@@ -45,6 +45,9 @@
   border-radius: 10px 10px;
   box-shadow: 0 0 40px rgba(0,0,0,0.3);
   transition: 0.3s;
-  height: 450px;
   width: 300px;
+}
+
+.card-image {
+  height: 450px;
 }

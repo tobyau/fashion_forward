@@ -8,10 +8,10 @@ const Navbar = () => {
         <img alt="" src="http://www.i2symbol.com/images/abc-123/f/script_capital_f_u2131_icon_256x256.png" className="brand-logo"/>
       </a>
       <div className="categories-container">
-        <a className="categories" href="/Tops">Tops</a>
-        <a className="categories" href="/Bottoms">Bottoms</a>
-        <a className="categories" href="/Dresses">Dresses</a>
-        <a className="categories" href="/Shoes">Shoes</a>
+        <a className="categories" href="/tops">Tops</a>
+        <a className="categories" href="/bottoms">Bottoms</a>
+        <a className="categories" href="/dresses">Dresses</a>
+        <a className="categories" href="/shoes">Shoes</a>
       </div>
       <div className="ml-auto">
         <a href="/" className="clickable-icon"><i className="fas fa-shopping-bag fa-2x"></i></a>

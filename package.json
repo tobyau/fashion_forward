@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.3",
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
     "react-router-dom": "^5.1.1",
@@ -13,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"nodemon ./server/app\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Route exact path="/" component={Carousel} />
-        <Route exact path="/(Tops|Bottoms|Dresses|Shoes)" component={ProductPage} />
+        <Route exact path="/(tops|bottoms|dresses|shoes)" component={ProductPage} />
       </div>
     </Router>
   );
