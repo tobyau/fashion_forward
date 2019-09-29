@@ -19,24 +19,33 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CardModal = (path) => {
+  
+  var image_number = {}
+  
   const classes = useStyles();
   
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = (e) => {
     setOpen(true);
+    // console.log(e.target);
+    // console.log(Object.entries(e.target));
+    // var count = 0;
+    var values_array = Object.values(e.target);
+    var image_tag = values_array[1].src;
+    // console.log(image_tag[14]);
+    image_number['number']= image_tag[14];
+    
   };
 
   const handleClose = () => {
     setOpen(false);
   };
   
-  // var path = window.location.pathname;
-  
   const Cards = (props) => {
     var card = [];
     for(let x = 1; x <= 9; x++) {
-      card.push(<img src={require(`../imgs${props.props.path}/${x}.png`)} alt="" className="card-image"/>)
+      card.push(<img src={require(`../imgs${props.props.path}/${x}.png`)} alt="" className="card-image" key={x}/>)
     }
     return(
       <div>
@@ -66,6 +75,7 @@ const CardModal = (path) => {
           <div className={classes.paper}>
             <h2 id="transition-modal-title">Product information</h2>
             <p id="transition-modal-description">react-transiton-group animates me.</p>
+            <h2>{image_number.number}</h2>
           </div>
         </Fade>
       </Modal>

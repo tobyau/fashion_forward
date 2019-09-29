@@ -2,8 +2,8 @@ import React from 'react';
 
 const Carousel = () => {
   return(
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+    <div className="carousel-inner">
         <div class="carousel-item active">
         <img class="d-block w-100" src="https://www.forever21.com/images/f21/us/en/web/20191004/0923_WGA_NightCollection_D_M.gif?1" alt="First slide"/>
         </div>
