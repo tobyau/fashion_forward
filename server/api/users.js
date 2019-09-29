@@ -79,7 +79,7 @@ router.get("/all", (req, res) => {
     Users.find({}, (err, match) => {
         console.log(match);
         res.send(match);
-    })
+    });
 });
 
 router.delete("/delete/:email", (req,res) => {
@@ -90,6 +90,5 @@ router.delete("/delete/:email", (req,res) => {
         res.send(200);
     })
 });
-
 
 module.exports = router;
