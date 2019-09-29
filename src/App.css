@@ -9,9 +9,19 @@
   margin-bottom: 1%;
 }
 
-.brand-logo {
-  height: 40px;
-  width: 40px;
+.brand {
+  padding-top: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+a.brand:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#brand {
+  font-family: 'Pacifico';
 }
 
 .categories-container {
