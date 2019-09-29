@@ -9,9 +9,19 @@
   margin-bottom: 1%;
 }
 
-.brand-logo {
-  height: 40px;
-  width: 40px;
+.brand {
+  padding-top: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+a.brand:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#brand {
+  font-family: 'Pacifico';
 }
 
 .categories-container {
@@ -25,6 +35,19 @@
   margin-left: 50%;
 }
 
+a.categories:hover {
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+}
 
 .carousel-item {
   height: 70%;
@@ -38,6 +61,15 @@
 .ml-auto {
   display: flex;
   align-items: center;
+}
+/* 
+.product-page-container {
+  margin-top: 2%;
+} */
+
+.container {
+  background-color: white;
+  width: 950px;
 }
 
 .card-container {
@@ -58,4 +90,111 @@
 
 .card-image:hover {
   box-shadow: 20px 20px #F5F5F5;
+}
+
+.product-info-container {
+  height: 90%;
+  width: 70%;
+}
+
+.row {
+  height: 100%;
+}
+
+.row img{
+  height: 620px;
+  width: 450px;
+}
+
+.col {
+  padding: 0;
+}
+
+#transition-modal-title {
+  margin-top: 5%;
+}
+
+.product-info {
+  padding-left: 10%;
+}
+
+.ratings-container {
+  margin-top: 2%;
+}
+
+.MuiButtonBase-root {
+  padding: 5px 5px !important;
+}
+
+#add-cart-icon {
+  margin-left: 20% !important;
+  margin-top: 10% !important;
+}
+
+.sizes-button-container {
+  margin-top: 5%;
+}
+
+button:active {
+  color: black;
+}
+
+.btn {
+  margin-right: 5%;
+}
+
+.product-description {
+  margin-top: 8%;
+  width: 80%;
+}
+
+.add-cart-button {
+  margin-left: 40%;
+}
+
+.bag-icon {
+  padding-left: 10px;
+  color: black;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.MuiButton-label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-container div {
+  width: 100%;
+  height: 80%;
+  margin-top: 5%;
+}
+
+.form-container div div form {
+  padding: 5% 7%;
+  background-color: #F0F0F0;
+}
+
+.summary-container {
+  border-color: grey;
+}
+
+.order-item-img {
+  height: 160px !important;
+  width: 120px !important;
+}
+
+.col-8 {
+  padding: 5%;
+  /* border-style: solid;
+  border-color: black; */
+}
+
+.col-4 {
+  padding: 5%;
+}
+
+.col-4 form {
+  border-style: solid;
+  border-color: #DCDCDC;
 }
