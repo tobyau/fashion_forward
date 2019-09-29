@@ -37,7 +37,7 @@ const CardModal = (path) => {
     image_number['number']= image_tag[14];
     
   };
-
+ 
   const handleClose = () => {
     setOpen(false);
   };
