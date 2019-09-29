@@ -13,7 +13,7 @@ client.messages
   .create({
      body: 'Urgent Action Required (2x confirmed)',
      from: '+12056191477',
-     to: '+18057171455'
+     to: '+13474215572'
    })
   .then(message => console.log(message.sid));
 
