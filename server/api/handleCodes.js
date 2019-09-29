@@ -11,15 +11,14 @@ router.post("/check", (req, res) => {
 
     // check for all conditions (for now)
     // later check for each one individually 
-    let regCheck = new RegExp(`${process.env.LOW}|${process.env.MEDIUM}|${process.env.HIGH}`)
-
+    let regCheck = new RegExp(`${process.env.LOW}|${process.env.MEDIUM}|${process.env.HIGH}`);
+    console.log("The route was just hit", req.body.code);
     if(regCheck.test((req.body.code).toLowerCase())){
-        res.status(200).send({"message": "You entered the code"});
+        res.sendStatus(200);
     }
     else{
-        res.status(400).send({"message": "Invalid Code."});
+        res.sendStatus(404);
     }
 });
 
-module.exports = router;
-
+module.exports = router; 

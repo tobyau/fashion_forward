@@ -12,8 +12,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const port = process.env.SERVER_PORT;
-
-
+    
 app.set('port', port);
 app.options('/', cors());
 app.use(bodyParser.json());
@@ -62,7 +61,6 @@ require("./models/users.js");
 app.use((req, res, next) => {
     next(createError(404));
 })
-
 
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
