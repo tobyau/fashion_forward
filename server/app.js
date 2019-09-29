@@ -53,6 +53,13 @@ app.get('/', cors(corsOptions), (req, res, next) => {
 
 app.use(cors(corsOptions));
 
+app.use("/users", require("./api/users.js"));
+app.use("/handler", require("./api/handleCodes.js"));
+
+
+require("./models/orders.js");
+require("./models/users.js");
+
 app.use((req, res, next) => {
     next(createError(404));
 })
