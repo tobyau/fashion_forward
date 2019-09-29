@@ -103,10 +103,10 @@ const CardModal = (path) => {
                   velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus 
                   pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,
                   sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. "</div>
-                  <Button variant="contained" color="default" id="add-cart-icon">
+                  <a href="/checkout"><Button variant="contained" color="default" id="add-cart-icon">
                     Add to Bag
-                    <i className="fas fa-shopping-bag fa-sm bag-icon"></i>
-                  </Button>
+                    <i  className="fas fa-shopping-bag fa-sm bag-icon"></i>
+                  </Button></a>
                 </div>
               </div>
             </div>
