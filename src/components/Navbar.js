@@ -58,7 +58,8 @@ class Navbar extends Component {
         </div>
         <div className="ml-auto">
           <NavLink exact to="/checkout" className="clickable-icon"><i className="fas fa-shopping-bag fa-2x"></i></NavLink>
-          {LoginAuth()}
+          <i className="fas fa-user-circle"></i>
+          {/* {LoginAuth()} */}
         </div>
       </nav>
     );
