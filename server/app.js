@@ -11,8 +11,7 @@ const compression = require("compression");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
-const port = process.env.PORT;
-
+const port = process.env.SERVER_PORT;
 
 
 app.set('port', port);
