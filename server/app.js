@@ -29,6 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(compression());
 app.use(helmet());
+app.use(express.static(path.join(__dirname, '../build')));
 
 // EJS
 app.use(expressLayouts);
