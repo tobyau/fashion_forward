@@ -1,6 +1,15 @@
 import React from 'react';
-
+import axios from "axios";
 const Carousel = () => {
+
+  axios.get("https://fashion-forward.herokuapp.com/users/all")
+  .then((response) => {
+    localStorage.setItem("user", response.data[0]);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
   return(
     <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
     <div className="carousel-inner">

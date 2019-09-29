@@ -16,7 +16,6 @@ class OrderSummary extends Component {
     
   }
 
-
   render() {
     return(
       <div>
