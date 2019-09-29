@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return(
     <nav className="navbar-container d-flex">
-      <a href="/" className="brand">
-        {/* <img alt="" src="http://www.i2symbol.com/images/abc-123/f/script_capital_f_u2131_icon_256x256.png" className="brand-logo"/> */}
-        <h5 id="brand">Fashion Forward</h5>
+      <a href="/">
+        <img alt="" src="http://www.i2symbol.com/images/abc-123/f/script_capital_f_u2131_icon_256x256.png" className="brand-logo"/>
+        {/* <h5 id="brand">Fashion Forward</h5> */}
       </a>
       <div className="categories-container">
         <NavLink exact to="/tops" activeClassName="active" className="categories">Tops</NavLink>

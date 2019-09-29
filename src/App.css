@@ -9,19 +9,10 @@
   margin-bottom: 1%;
 }
 
-.brand {
-  padding-top: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-a.brand:hover {
-  color: black;
-  text-decoration: none;
-}
-
-#brand {
-  font-family: 'Pacifico';
+.brand-logo {
+  height: 40px;
+  width: 40px;
+  padding-top: 1%;
 }
 
 .categories-container {
@@ -69,7 +60,6 @@ a.categories:hover {
 
 .container {
   background-color: white;
-  width: 950px;
 }
 
 .card-container {
@@ -170,7 +160,7 @@ button:active {
   /* margin-top: 5%; */
 }
 
-.form-container div div form {
+.form-container div div div form {
   padding: 5% 7%;
   background-color: #F0F0F0;
 }
@@ -182,19 +172,13 @@ button:active {
   
 }
 
-.order-container {
-  
-}
-
 .order-item-img {
   height: 160px !important;
   width: 120px !important;
 }
 
-.col-8 {
+.checkout-section {
   padding: 5%;
-  /* border-style: solid;
-  border-color: black; */
 }
 
 .col-4 {
@@ -275,4 +259,14 @@ hr {
 .promo-control {
   margin-left: 5%;
   width: 40%;
+}
+.next-section-button {
+  width: 90%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.date-input {
+  width: 50%;
 }
