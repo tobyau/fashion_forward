@@ -12,7 +12,7 @@ require("dotenv").config();
 
 router.get("/login", (req, res) => {
     res.render('login');
-})
+});
 
 // triggered when the user tries to make a login request
 router.post("/login", (req,res, next) => {
@@ -24,7 +24,6 @@ router.post("/login", (req,res, next) => {
     failureRedirect: '/users/login',
     failureFlash: true
     })(req, res, next);
-
 });
 
 // Logout Handle

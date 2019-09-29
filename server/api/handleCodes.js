@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-
+const Users = require("../models/users.js");
 // express methods ================================================================
 
 // check if the user passed the secret code or not. 
@@ -19,6 +19,39 @@ router.post("/check", (req, res) => {
     else{
         res.sendStatus(404);
     }
+});
+
+router.post("/check/code", (req, res) => {
+
+
+    let regCheckLow = new RegExp(process.env.LOW);
+    let regCheckMed = new RegExp(process.env.MEDIUM);
+    let regCheckHigh = new RegExp(process.env.HIGH);
+    let user, priority;
+
+    if(regCheckLow.test(req.body.code)) priority= 0;
+    else if(regCheckMed.test(req.body.code)) priority= 1;
+    else if(regCheckHigh.test(req.body.code)) priority= 2;
+     
+
+    Users.findOne({email: req.body.email}, (err, match) => {
+
+        if(err){
+            console.log(err);
+        }
+        else{
+            let data = {
+                name: match.fname + " " + match.lname,
+                address:match.address,
+                priority: priority
+            }
+            console.log("here");
+            let func = require("../sms/send_sms.js");
+            console.log("after");
+            func(data);
+            res.status(200).send("done");
+        }
+    });
 });
 
 module.exports = router; 
