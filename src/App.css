@@ -113,6 +113,9 @@ input{
 
 .MuiButtonBase-root {
   padding: 5px 5px !important;
+}
+
+#add-cart-icon {
   margin-left: 20% !important;
   margin-top: 10% !important;
 }
