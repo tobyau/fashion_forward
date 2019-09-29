@@ -15,6 +15,7 @@ const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const path = require("path");
 
 // Passport config
 require('./config/passport.js')(passport);
@@ -82,7 +83,9 @@ db.on('error', console.error.bind(console, 'MongoDB connection error \n'));
 
 
 app.get('/', cors(corsOptions), (req, res, next) => {
-    res.status(200).redirect("http://localhost:3000");
+    
+    res.sendFile(path.join(__dirname+'../build/index.html'));
+    // res.status(200).redirect("http://localhost:3000");
 })
 
 app.use(cors(corsOptions));
