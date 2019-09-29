@@ -36,7 +36,7 @@
 
 <img src="https://github.com/tobyau/shopping_extension/blob/Lawrence-br/references/detail.png" width="600">
 
-<p><strong>Process</strong></p>
+<p><strong>Process Notes</strong></p>
 
 <p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true" width="300" align="left">
 
