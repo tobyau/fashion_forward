@@ -1,5 +1,5 @@
 # Fashion Forward
-<h1>HackNY 2019</h1>
+<h2>HackNY 2019</h2>
 <p>Category: Social Good</p>
 
 <p><strong>The Fashion Forward web application and companion Chrome extension combine to create new avenues for secretly reporting potential partner abuse.</strong></p>
@@ -14,8 +14,8 @@
 
 <p><strong>Collaboration:</strong> 
   <a href="https://github.com/PsyCas">Parakram Basnet</a>,
-  <a href="https://github.com/tobyau">Toby Au</a></p
-  <a href="https://github.com/giocare">Jessica Adjei</a></p>
+  <a href="https://github.com/tobyau">Toby Au</a>,
+  <a href="https://github.com/giocare">Jessica Adjei</a>,
   <a href="https://github.com/LawrenceCastillo">Lawrence Castillo</a></p>
 
 <p><strong>Application Stack:</strong><br>
@@ -28,14 +28,18 @@
   Domain from Domain.com<br>
   Deployed to Google Cloud</p>
 
-<p><strong>Screenshots</strong></p>
+<p><strong>Screenshots: Web Application</strong></p>
 
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/main.png?raw=true" width="600">
+
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/shop.png?raw=true" width="600">
+
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/detail.png?raw=true" width="600">
 
 <p><strong>Process</strong></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true"></p>
+<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true" width="300" align="left">
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1566.jpg?raw=true"></p>
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true" width="300" align="middle"></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true"></p>
-
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1566.jpg?raw=true" width="600">
