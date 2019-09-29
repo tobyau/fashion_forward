@@ -160,7 +160,7 @@ button:active {
   margin-top: 5%;
 }
 
-.form-container div div form {
+.form-container div div div form {
   padding: 5% 7%;
   background-color: #F0F0F0;
 }
@@ -174,10 +174,8 @@ button:active {
   width: 120px !important;
 }
 
-.col-8 {
+.checkout-section {
   padding: 5%;
-  /* border-style: solid;
-  border-color: black; */
 }
 
 .col-4 {
@@ -187,4 +185,15 @@ button:active {
 .col-4 form {
   border-style: solid;
   border-color: #DCDCDC;
+}
+
+.next-section-button {
+  width: 90%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.date-input {
+  width: 50%;
 }

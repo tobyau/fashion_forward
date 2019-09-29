@@ -92,7 +92,7 @@ const CardModal = (path) => {
                 <div className="col product-info">
                   <h1 id="transition-modal-title">Product Name</h1>
                   <Ratings />
-                  <h3>Price: $29.99</h3>
+                  <h3>Price: $79.99</h3>
                   <div className="sizes-button-container">
                     <button type="button" className="btn btn-outline-dark">XS</button>
                     <button type="button" className="btn btn-outline-dark">S</button>
