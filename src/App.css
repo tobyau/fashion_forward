@@ -72,3 +72,8 @@ a.categories:hover {
 .card-image:hover {
   box-shadow: 20px 20px #F5F5F5;
 }
+
+input{
+  display: block;
+  box-sizing: border-box;
+}
