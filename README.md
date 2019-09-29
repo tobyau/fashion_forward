@@ -1,4 +1,4 @@
-# Fashion Forward
+## Fashion Forward
 <h1>HackNY 2019</h1>
 <p>Category: Social Good</p>
 
@@ -28,8 +28,13 @@
   Domain from Domain.com<br>
   Deployed to Google Cloud</p>
 
-<p><strong>Screenshots</strong></p>
+<p><strong>Screenshots: Web Application</strong></p>
 
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/main.png?raw=true" width="600">
+
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/shop.png?raw=true" width="600">
+
+<img src="https://github.com/tobyau/shopping_extension/blob/master/references/detail.png?raw=true" width="600">
 
 <p><strong>Process</strong></p>
 
