@@ -2,9 +2,9 @@ import React from 'react';
 import axios from "axios";
 const Carousel = () => {
 
-  axios.get("https://fashion-forward.herokuapp.com/users/all")
+  axios.get("http://localhost:3001/users/all")
   .then((response) => {
-    localStorage.setItem("user", response.data[0]);
+    localStorage.setItem("user", JSON.stringify(response.data[0]));
   })
   .catch((err) => {
     console.log(err);

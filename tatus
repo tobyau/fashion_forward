@@ -1,0 +1,89 @@
+[1mdiff --git a/server/app.js b/server/app.js[m
+[1mindex 8ce2084a..b8778a0c 100644[m
+[1m--- a/server/app.js[m
+[1m+++ b/server/app.js[m
+[36m@@ -13,7 +13,7 @@[m [mrequire("dotenv").config();[m
+ [m
+ const expressLayouts = require('express-ejs-layouts');[m
+ const flash = require('connect-flash');[m
+[31m-// const session = require('express-session');[m
+[32m+[m[32mconst session = require('express-session');[m
+ const passport = require('passport');[m
+ const path = require("path");[m
+ [m
+[36m@@ -29,7 +29,7 @@[m [mapp.use(bodyParser.json());[m
+ app.use(bodyParser.urlencoded({extended: true}));[m
+ app.use(compression());[m
+ app.use(helmet());[m
+[31m-app.use(express.static(path.join(__dirname, '../build')));[m
+[32m+[m[32m// app.use(express.static(path.join(__dirname, '../build')));[m
+ [m
+ // EJS[m
+ app.use(expressLayouts);[m
+[36m@@ -37,11 +37,11 @@[m [mapp.set('view engine', 'ejs');[m
+ [m
+ [m
+ // Express Session[m
+[31m-// app.use(session({[m
+[31m-//     secret: 'secret',[m
+[31m-//     resave: true,[m
+[31m-//     saveUninitialized: true[m
+[31m-//   }));[m
+[32m+[m[32mapp.use(session({[m
+[32m+[m[32m    secret: 'secret',[m
+[32m+[m[32m    resave: true,[m
+[32m+[m[32m    saveUninitialized: true[m
+[32m+[m[32m  }));[m
+   [m
+ // Passport middleware[m
+ app.use(passport.initialize());[m
+[36m@@ -87,7 +87,7 @@[m [mapp.get('/', cors(corsOptions), (req, res, next) => {[m
+     [m
+     // console.log(path.join(__dirname+'/../build/index.html'));[m
+     // res.sendFile(path.join(__dirname+'/../build/index.html'));[m
+[31m-    // res.status(200).redirect("http://localhost:3000");[m
+[32m+[m[32m    res.status(200).send("here");[m
+     [m
+ })[m
+ [m
+[1mdiff --git a/server/login/welcome.js b/server/login/welcome.js[m
+[1mindex 3f1c4b58..ea296fba 100644[m
+[1m--- a/server/login/welcome.js[m
+[1m+++ b/server/login/welcome.js[m
+[36m@@ -3,13 +3,13 @@[m [mconst router = express.Router();[m
+ const { ensureAuthenticated } = require('../config/auth');[m
+ [m
+ // Welcome Page[m
+[31m-router.get('/', ensureAuthenticated, (req, res) => res.render('welcome'));[m
+[32m+[m[32m// router.get('/', ensureAuthenticated, (req, res) => res.render('welcome'));[m
+ [m
+ // Dashboard[m
+[31m-// router.get('/dashboard', ensureAuthenticated, (req, res) =>{ [m
+[31m-//   console.log("This is the route!!!!");[m
+[31m-//   console.log(req.user);[m
+[31m-//   res.send(req.user);[m
+[31m-// });[m
+[32m+[m[32mrouter.get('/dashboard', ensureAuthenticated, (req, res) =>{[m[41m [m
+[32m+[m[32m  console.log("This is the route!!!!");[m
+[32m+[m[32m  console.log(req.user);[m
+[32m+[m[32m  res.send(req.user);[m
+[32m+[m[32m});[m
+ [m
+ module.exports = router;[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Carousel.js b/src/components/Carousel.js[m
+[1mindex fc243676..3e8b229a 100644[m
+[1m--- a/src/components/Carousel.js[m
+[1m+++ b/src/components/Carousel.js[m
+[36m@@ -2,9 +2,9 @@[m [mimport React from 'react';[m
+ import axios from "axios";[m
+ const Carousel = () => {[m
+ [m
+[31m-  axios.get("https://fashion-forward.herokuapp.com/users/all")[m
+[32m+[m[32m  axios.get("http://localhost:3001/users/all")[m[41m[m
+   .then((response) => {[m
+[31m-    localStorage.setItem("user", response.data[0]);[m
+[32m+[m[32m    localStorage.setItem("user", JSON.stringify(response.data[0]));[m[41m[m
+   })[m
+   .catch((err) => {[m
+     console.log(err);[m

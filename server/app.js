@@ -13,7 +13,7 @@ require("dotenv").config();
 
 const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
-// const session = require('express-session');
+const session = require('express-session');
 const passport = require('passport');
 const path = require("path");
 
@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(compression());
 app.use(helmet());
-app.use(express.static(path.join(__dirname, '../build')));
+// app.use(express.static(path.join(__dirname, '../build')));
 
 // EJS
 app.use(expressLayouts);
@@ -37,11 +37,11 @@ app.set('view engine', 'ejs');
 
 
 // Express Session
-// app.use(session({
-//     secret: 'secret',
-//     resave: true,
-//     saveUninitialized: true
-//   }));
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+  }));
   
 // Passport middleware
 app.use(passport.initialize());
@@ -87,7 +87,7 @@ app.get('/', cors(corsOptions), (req, res, next) => {
     
     // console.log(path.join(__dirname+'/../build/index.html'));
     // res.sendFile(path.join(__dirname+'/../build/index.html'));
-    // res.status(200).redirect("http://localhost:3000");
+    res.status(200).send("here");
     
 })
 
