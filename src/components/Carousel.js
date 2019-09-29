@@ -4,8 +4,13 @@ const Carousel = () => {
   return(
     <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
     <div className="carousel-inner">
+<<<<<<< HEAD
         <div className="carousel-item active">
         <img className="d-block w-100" src="https://www.forever21.com/images/f21/us/en/web/20191004/0923_WGA_NightCollection_D_M.gif?1" alt="First slide"/>
+=======
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="https://www.forever21.com/images/f21/us/en/web/20191004/0923_WGA_NightCollection_D_M.gif?1" alt="First slide"/>
+>>>>>>> 5d37b1fa882288c462092cbdf545b24d40533494
         </div>
         <div className="carousel-item">
         <img className="d-block w-100" src="https://www.forever21.com/images/f21/us/en/web/20191004/0923_WGA_UrbanYouth_D_M.gif?1" alt="Second slide"/>
