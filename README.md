@@ -30,11 +30,11 @@
 
 <p><strong>Screenshots: Web Application</strong></p>
 
-<img src="https://github.com/tobyau/shopping_extension/blob/master/references/main.png?raw=true" width="600">
+<img src="https://github.com/tobyau/shopping_extension/blob/Lawrence-br/references/main.png" width="600">
 
-<img src="https://github.com/tobyau/shopping_extension/blob/master/references/shop.png?raw=true" width="600">
+<img src="https://github.com/tobyau/shopping_extension/blob/Lawrence-br/references/shop.png" width="600">
 
-<img src="https://github.com/tobyau/shopping_extension/blob/master/references/detail.png?raw=true" width="600">
+<img src="https://github.com/tobyau/shopping_extension/blob/Lawrence-br/references/detail.png" width="600">
 
 <p><strong>Process</strong></p>
 
