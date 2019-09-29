@@ -24,7 +24,7 @@
     "react-use": "^12.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./server/app",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

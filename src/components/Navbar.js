@@ -15,7 +15,7 @@ class Navbar extends Component {
   }
   
   handleLogin = () => {
-    axios.get("http://localhost:3001/dashboard")
+    axios.get("https://https://fashion-forward.herokuapp.com/dashboard")
       .then(res => {
         // console.log(res);
         this.setState({ 
