@@ -14,8 +14,8 @@
 
 <p><strong>Collaboration:</strong> 
   <a href="https://github.com/PsyCas">Parakram Basnet</a>,
-  <a href="https://github.com/tobyau">Toby Au</a></p
-  <a href="https://github.com/giocare">Jessica Adjei</a></p>
+  <a href="https://github.com/tobyau">Toby Au</a>,
+  <a href="https://github.com/giocare">Jessica Adjei</a>,
   <a href="https://github.com/LawrenceCastillo">Lawrence Castillo</a></p>
 
 <p><strong>Application Stack:</strong><br>
@@ -33,9 +33,8 @@
 
 <p><strong>Process</strong></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true"></p>
+<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1565.jpg?raw=true" width="300"></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1566.jpg?raw=true"></p>
+<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true" width="300"></p>
 
-<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1567.jpg?raw=true"></p>
-
+<p><img src="https://github.com/tobyau/shopping_extension/blob/master/references/IMG_1566.jpg?raw=true" width="600"></p>
