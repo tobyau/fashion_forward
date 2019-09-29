@@ -59,6 +59,7 @@ a.categories:hover {
 
 .container {
   background-color: white;
+  width: 950px;
 }
 
 .card-container {
