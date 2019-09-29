@@ -86,8 +86,9 @@ db.on('error', console.error.bind(console, 'MongoDB connection error \n'));
 app.get('/', cors(corsOptions), (req, res, next) => {
     
     // console.log(path.join(__dirname+'/../build/index.html'));
-    res.sendFile(path.join(__dirname+'/../build/index.html'));
+    // res.sendFile(path.join(__dirname+'/../build/index.html'));
     // res.status(200).redirect("http://localhost:3000");
+    
 })
 
 app.use(cors(corsOptions));
