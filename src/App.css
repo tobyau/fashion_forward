@@ -1,22 +1,61 @@
 .App {
+  height : 100vh;
+}
+
+.navbar-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 1%;
+  margin-bottom: 1%;
+}
+
+.brand-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.categories-container {
+  padding-top: 8px;
+  margin-left: 5%;
+}
+
+.categories {
+  text-decoration: none;
+  color: black;
+  margin-left: 50%;
+}
+
+
+.carousel-item {
+  height: 70%;
+}
+
+.clickable-icon {
+  margin-right: 30px;
+  color: black;
+}
+
+.ml-auto {
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.card-image {
+  margin: 50px;
+  border-radius: 3px 3px;
+  box-shadow: 10px 10px #F5F5F5;
+  transition: 0.3s;
+  height: 450px;
+  width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.card-image:hover {
+  box-shadow: 20px 20px #F5F5F5;
 }

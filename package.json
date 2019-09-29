@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.4.3",
     "concurrently": "^4.1.2",
     "nodemon": "^1.19.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
+    "react-router-dom": "^5.1.1",
     "react-scripts": "3.1.2"
   },
   "scripts": {
