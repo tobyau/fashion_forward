@@ -166,8 +166,8 @@ button:active {
 
 .form-container div {
   width: 100%;
-  height: 80%;
-  margin-top: 5%;
+  /* height: 80%; */
+  /* margin-top: 5%; */
 }
 
 .form-container div div form {
@@ -176,7 +176,14 @@ button:active {
 }
 
 .summary-container {
-  border-color: grey;
+  border-color: #DCDCDC;
+  border-style: solid;
+  width: 90%;
+  
+}
+
+.order-container {
+  
 }
 
 .order-item-img {
@@ -197,4 +204,75 @@ button:active {
 .col-4 form {
   border-style: solid;
   border-color: #DCDCDC;
+}
+
+hr { 
+  border: 1.5px solid black;
+  width:90%;
+}
+
+.subtotal {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+  
+}
+
+.moveRight {
+  /* text-align: right; */
+  float: right;
+}
+
+.moveLeft{
+  float: left;
+}
+
+.pricing {
+  display: inline-block;
+}
+
+.order-product-info {
+  margin-left: 5%;
+}
+
+.order-item-img {
+  margin-left: 5%;
+}
+
+.order-main-product{
+  display: inline-block;
+}
+
+
+.content {
+  width: 10%;
+  margin-top: 5%;
+  overflow: hidden;
+}
+
+.content img {
+  margin-right: 15px;
+  float: left;
+}
+
+.content h3,
+.content p{
+  margin-left: 15px;
+  display: block;
+  margin: 2px 0 0 0;
+}
+
+.subtotal-strike {
+  text-decoration: line-through;
+  
+}
+
+.savings {
+  color: red;
+}
+
+.promo-control {
+  margin-left: 5%;
+  width: 40%;
 }
