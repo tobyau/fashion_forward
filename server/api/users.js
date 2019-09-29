@@ -4,71 +4,118 @@ const router = express.Router();    // router for express
 const mongoose = require("mongoose");   // mongoose to manage db calls 
 const Users = require("../models/users.js");    // import the users schema
 const crypto = require("crypto");
-
-
-// helper functions ======================================================
-
-// async function getHash(password){
-//     let fVal;
-//     await 
-//     console.log("beforeReturn")
-//     return(fVal);    
-// } 
+const passport = require('passport');
+require("dotenv").config();
 
 // express routes ======================================================== 
 
-// triggered when the user tries to make a login request
-router.post("/login", (req,res) => {
 
-    let password = getHash(req.body.password);
-    Users.findOne({email: req.body.email, password: password}, (err, match) => {
-        
-        if(match){
-            res.status(200).send("You have been successfully authenticated");    
-        }
-        
-        res.status(404).json({message: "Bad request"});
-    });
+router.get("/login", (req, res) => {
+    res.render('login');
+})
+
+// triggered when the user tries to make a login request
+router.post("/login", (req,res, next) => {
+    console.log("in the route");
+    // Login Handle
+   
+    passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/users/login',
+    failureFlash: true
+    })(req, res, next);
+
+});
+
+// Logout Handle
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login');
+});
+
+router.get("/register", (req, res) => {
+    res.render("register");
 })
 
 // triggered when a new user needs to be
 router.post("/create", (req, res) => {
 
-    Users.findOne({email: req.body.email}, async (err, match) => {
-        if(err){
-            console.log(err);
-        }
-        else if(match){
-            res.status(400).json({message: "The email is already registered"});
-        }
-        else{
-            console.log("Outside function")
+    const {lname, fname, email, address, phone, password, password2 } = req.body;
+    let errors = [];
+    
+    // Check required fields
+    if(!fname || !lname || !email || !address || !phone || !password || !password2) {
+        errors.push({ msg: 'Please fill in all fields' });
+    }
 
-            crypto.pbkdf2(req.body.password, process.env.SALT, parseInt(process.env.ITERATIONS), parseInt(process.env.KEYLEN), process.env.DIGEST, async (err, derivedKey) => {
-                if (err) throw err;
-                console.log('In here');
-                let password = derivedKey.toString('hex');
-                console.log("Hashing done");
+    // Check password match
+    if(password != password2) {
+        errors.push({ msg: 'Passwords do not match' });
+    }
 
-                const User = new Users({
-                    _id: new mongoose.Types.ObjectId(),
-                    lname: req.body.lname,
-                    fname: req.body.fname,
-                    address: req.body.address,
-                    phone: req.body.number,
-                    email: req.body.email,
-                    password: password
+    // Check pass length
+    if(password.length < 6) {
+        errors.push({ msg: 'Password must be at least 6 characters' });
+    }
+
+    if(errors.length > 0) {
+        res.render('register', {
+        errors,
+        lname,
+        fname,
+        email,
+        address,
+        phone,
+        password,
+        password2
+        });
+    }
+    else{
+        Users.findOne({email: req.body.email}, async (err, match) => {
+            if(err){
+                console.log(err);
+            }
+            else if(match){
+                errors.push({ msg: 'Email is already registered' });
+                res.render('register', {
+                    errors,
+                    lname,
+                    fname,
+                    email,
+                    address,
+                    phone,
+                    password,
+                    password2
                 });
-                User.save()
-                .catch(err => {
-                    console.log(err);
-                    res.status(500).send(false);
+                res.status(400).json({message: "The email is already registered"});
+            }
+            else{
+
+                crypto.pbkdf2(req.body.password, process.env.SALT, parseInt(process.env.ITERATIONS), parseInt(process.env.KEYLEN), process.env.DIGEST, async (err, derivedKey) => {
+                    if (err) throw err;
+                    let password = derivedKey.toString('hex');
+
+                    const User = new Users({
+                        _id: new mongoose.Types.ObjectId(),
+                        lname: lname,
+                        fname: fname,
+                        address: address,
+                        phone: phone,
+                        email: email,
+                        password: password
+                    });
+                    User.save()
+                    .catch(err => {
+                        console.log(err);
+                        res.status(500).send(false);
+                    });
+                    req.flash('success_msg', 'You are now registered and can log in');
+                    res.redirect('/users/login'); 
                 });
-                console.log('I am done');                
-                res.status(200).send("Ok");
-            });
-        }
-    })
+            }
+        })
+    }
     
 });
 
@@ -79,7 +126,7 @@ router.get("/all", (req, res) => {
     Users.find({}, (err, match) => {
         console.log(match);
         res.send(match);
-    })
+    });
 });
 
 router.delete("/delete/:email", (req,res) => {
@@ -90,6 +137,5 @@ router.delete("/delete/:email", (req,res) => {
         res.send(200);
     })
 });
-
 
 module.exports = router;
