@@ -93,17 +93,17 @@ const CardModal = (path) => {
                   <Ratings />
                   <h3>Price: $29.99</h3>
                   <div className="sizes-button-container">
-                    <button type="button" class="btn btn-outline-dark">XS</button>
-                    <button type="button" class="btn btn-outline-dark">S</button>
-                    <button type="button" class="btn btn-outline-dark">M</button>
-                    <button type="button" class="btn btn-outline-dark">L</button>
-                    <button type="button" class="btn btn-outline-dark">XL</button>
+                    <button type="button" className="btn btn-outline-dark">XS</button>
+                    <button type="button" className="btn btn-outline-dark">S</button>
+                    <button type="button" className="btn btn-outline-dark">M</button>
+                    <button type="button" className="btn btn-outline-dark">L</button>
+                    <button type="button" className="btn btn-outline-dark">XL</button>
                   </div>
                   <div className="product-description">"Lorem dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut
                   velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus 
                   pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,
                   sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. "</div>
-                  <Button variant="contained" color="default">
+                  <Button variant="contained" color="default" id="add-cart-icon">
                     Add to Bag
                     <i className="fas fa-shopping-bag fa-sm bag-icon"></i>
                   </Button>
