@@ -2,6 +2,8 @@
 <h2>HackNY 2019</h2>
 <p>Category: Social Good</p>
 
+[DevPost Submission](https://devpost.com/software/fashion-forward)
+
 <p><strong>The Fashion Forward web application and companion Chrome extension combine to create new avenues for secretly reporting potential partner abuse.</strong></p>
 
 <p>It’s estimated HALF of all intimate partner violence in the U.S. will go unreported -- for this group of individuals, intimidation and monitoring play a substantial role in their silence.</p>
