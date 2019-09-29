@@ -4,6 +4,7 @@ const Carousel = () => {
 
   axios.get("http://localhost:3001/users/all")
   .then((response) => {
+    console.log("here");
     localStorage.setItem("user", JSON.stringify(response.data[0]));
   })
   .catch((err) => {

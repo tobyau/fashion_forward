@@ -4,16 +4,33 @@ import axios from "axios";
 class OrderSummary extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      code:null
+    }
     
     this.requestService = this.requestService.bind(this);
+    this.updateValue = this.updateValue.bind(this);
   }
 
 
+  updateValue(event){
+    event.preventDefault();
+    console.log(event.target.value);
+
+    this.setState({
+      code: event.target.value
+    })
+  }
+
   requestService(){
-    
-    axios.get("")
-    
+    let thing = JSON.parse(localStorage.getItem("user"));
+    axios.post("http://localhost:3001/handler/check/code", {email: thing.email, code: this.state.code})
+      .then((response) => {
+        alert("The code was invalid.")
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   render() {
@@ -31,8 +48,8 @@ class OrderSummary extends Component {
             </div>
               <hr></hr>
               <div className="form-group">
-               <input type="text" placeholder="PROMO CODE" className="promo-control form-control"/>
-               <button onClick = {this.requestService()}>Apply</button>   
+               <input type="text" onChange = {this.updateValue} placeholder="PROMO CODE" className="promo-control form-control"/>
+               <button onClick = {this.requestService}>Apply</button>   
               </div>
               <div className="subtotal">
                 <div className="pricing">
