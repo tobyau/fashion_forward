@@ -7,4 +7,4 @@ let orderSchema = new Schema({
     promocode: String
 });
 
-module.exports = mongoose.model("users", userSchema);
+module.exports = mongoose.model("orders", orderSchema);
