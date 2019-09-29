@@ -3,6 +3,8 @@ import ContactForm from './ContactForm';
 import Payment from './Payment';
 import OrderSummary from './OrderSummary';
 
+import ConfettiPage from './Confetti';
+
 class Checkout extends Component {
   constructor() {
     super();
@@ -30,6 +32,14 @@ class Checkout extends Component {
   
   render() {
     
+    const toggleConfetti = () => {
+      if(this.state.confirmation === true) {
+        return (
+          <ConfettiPage />
+        );
+      }
+    }
+    
     const handleSections = () => {
       if(this.state.section === true) {
         return (<Payment />)
@@ -53,6 +63,7 @@ class Checkout extends Component {
             <OrderSummary />
           </div>
         </div>
+        {toggleConfetti()}
       </div>
     );
   }
