@@ -9,6 +9,8 @@ const router = express.Router();
 //Eg: apple in pineapple OR apple in thiskshdkajsdh<apple>lskd 
 router.post("/check", (req, res) => {
 
+    // check for all conditions (for now)
+    // later check for each one individually 
     let regCheck = new RegExp(`${process.env.LOW}|${process.env.MEDIUM}|${process.env.HIGH}`)
 
     if(regCheck.test((req.body.code).toLowerCase())){
