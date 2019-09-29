@@ -53,6 +53,10 @@ a.categories:hover {
   align-items: center;
 }
 
+.product-page-container {
+  margin-top: 2%;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -76,4 +80,68 @@ a.categories:hover {
 input{
   display: block;
   box-sizing: border-box;
+}
+.product-info-container {
+  height: 90%;
+  width: 70%;
+}
+
+.row {
+  height: 100%;
+}
+
+.row img{
+  height: 620px;
+  width: 450px;
+}
+
+.col {
+  padding: 0;
+}
+
+#transition-modal-title {
+  margin-top: 5%;
+}
+
+.product-info {
+  padding-left: 10%;
+}
+
+.ratings-container {
+  margin-top: 5%;
+}
+
+.MuiButtonBase-root {
+  padding: 5px 5px !important;
+  margin-left: 20% !important;
+  margin-top: 10% !important;
+}
+
+.sizes-button-container {
+  margin-top: 10%;
+}
+
+.btn {
+  margin-right: 5%;
+}
+
+.product-description {
+  margin-top: 10%;
+  width: 80%;
+}
+
+.add-cart-button {
+  margin-left: 40%;
+}
+
+.bag-icon {
+  padding-left: 10px;
+  color: black;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.MuiButton-label {
+  padding-left: 10px;
+  padding-right: 10px;
 }
