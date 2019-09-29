@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
+    "@material-ui/lab": "^4.0.0-alpha.27",
     "concurrently": "^4.1.2",
     "nodemon": "^1.19.2",
     "react": "^16.10.0",
