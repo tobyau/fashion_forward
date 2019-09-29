@@ -25,6 +25,19 @@
   margin-left: 50%;
 }
 
+a.categories:hover {
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+}
 
 .carousel-item {
   height: 70%;
