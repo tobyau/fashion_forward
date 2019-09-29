@@ -1,5 +1,5 @@
-## Fashion Forward
-<h1>HackNY 2019</h1>
+# Fashion Forward
+<h2>HackNY 2019</h2>
 <p>Category: Social Good</p>
 
 <p><strong>The Fashion Forward web application and companion Chrome extension combine to create new avenues for secretly reporting potential partner abuse.</strong></p>
