@@ -1,5 +1,8 @@
 module.exports = {
   ensureAuthenticated: function(req, res, next) {
+    console.log("req is: " , req.body)
+    console.log("req is: " , req.session.passport)
+    
     if(req.isAuthenticated()) {
       return next();
     }

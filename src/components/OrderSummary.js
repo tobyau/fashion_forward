@@ -1,11 +1,22 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class OrderSummary extends Component {
   constructor() {
     super();
     this.state = {}
+    
+    this.requestService = this.requestService.bind(this);
   }
-  
+
+
+  requestService(){
+    
+    axios.get("")
+    
+  }
+
+
   render() {
     return(
       <div>
@@ -22,6 +33,7 @@ class OrderSummary extends Component {
               <hr></hr>
               <div className="form-group">
                <input type="text" placeholder="PROMO CODE" className="promo-control form-control"/>
+               <button onClick = {this.requestService()}>Apply</button>   
               </div>
               <div className="subtotal">
                 <div className="pricing">
