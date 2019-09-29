@@ -16,7 +16,7 @@ const Navbar = () => {
         <NavLink exact to="/shoes" activeClassName="active" className="categories">Shoes</NavLink>
       </div>
       <div className="ml-auto">
-        <a href="/checkout" className="clickable-icon"><i className="fas fa-shopping-bag fa-2x"></i></a>
+        <NavLink exact to="/checkout" className="clickable-icon"><i className="fas fa-shopping-bag fa-2x"></i></NavLink>
         <Button variant="contained">
           Login
         </Button>

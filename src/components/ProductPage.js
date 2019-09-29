@@ -84,7 +84,6 @@ const CardModal = (path) => {
         }}
       >
         <Fade in={open}>
-          <div className={`${classes.paper} product-info-container`}>
             <div className="container">
               <div className="row">
                 <div className="col">
@@ -112,7 +111,6 @@ const CardModal = (path) => {
                 </div>
               </div>
             </div>
-          </div>
         </Fade>
       </Modal>
     </div>

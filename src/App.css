@@ -52,9 +52,13 @@ a.categories:hover {
   display: flex;
   align-items: center;
 }
-
+/* 
 .product-page-container {
   margin-top: 2%;
+} */
+
+.container {
+  background-color: white;
 }
 
 .card-container {
@@ -104,7 +108,7 @@ a.categories:hover {
 }
 
 .ratings-container {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .MuiButtonBase-root {
@@ -117,7 +121,11 @@ a.categories:hover {
 }
 
 .sizes-button-container {
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+button:active {
+  color: black;
 }
 
 .btn {
@@ -125,7 +133,7 @@ a.categories:hover {
 }
 
 .product-description {
-  margin-top: 10%;
+  margin-top: 8%;
   width: 80%;
 }
 
