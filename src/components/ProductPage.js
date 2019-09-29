@@ -64,6 +64,8 @@ const CardModal = (path) => {
     setOpen(false);
   };
   
+  
+  
   return(
     <div className="card-container">
       <div onClick={handleOpen}> 
